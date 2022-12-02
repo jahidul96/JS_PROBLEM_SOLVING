@@ -3,10 +3,13 @@ function binerySearch(arr, target) {
   let lastIndex = arr.length - 1;
 
   while (firstIndex <= lastIndex) {
+    console.log("finding....");
     let middleIndex = Math.floor((firstIndex + lastIndex) / 2);
-    if (target === arr[middleIndex]) {
+
+    if (target == arr[middleIndex]) {
       return middleIndex;
     }
+
     if (target < arr[middleIndex]) {
       lastIndex = middleIndex - 1;
     } else {
