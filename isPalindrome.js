@@ -14,4 +14,4 @@ function isPalindrome(x) {
   return x === reverse;
 }
 
-console.log(isPalindrome(181));
+console.log(isPalindrome(182));
