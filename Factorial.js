@@ -11,4 +11,15 @@ function Factorial(n) {
 
 const result = Factorial(4);
 
-console.log(result);
+// console.log(result);
+
+// recursive factorial
+function recursiveFactorila(num) {
+  if (num < 1) {
+    return 1;
+  }
+
+  return num * recursiveFactorila(num - 1);
+}
+
+console.log(recursiveFactorila(5));
