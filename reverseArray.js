@@ -1,20 +1,22 @@
-function reverseArray(arr) {
-  let start = 0;
-  let end = arr.length - 1;
+function reverseArray(numbers) {
+  let firstIndex = 0;
+  let lastIndex = numbers.length - 1;
 
-  while (start < end) {
-    const value = arr[start];
-    arr[start] = arr[end];
-    arr[end] = value;
+  while (firstIndex < lastIndex) {
+    let val = numbers[firstIndex]; //[1, 2,3,4,5]
+    numbers[firstIndex] = numbers[lastIndex];
 
-    start++;
-    end--;
+    //[1, 2,3,4,5] = [5,4,3,2,1]
+    numbers[lastIndex] = val;
+
+    firstIndex++;
+    lastIndex--;
   }
 
-  return arr;
+  return numbers;
 }
 
-console.log(reverseArray([1, 2, 3, 4, 5, 6, 7]));
+console.log(reverseArray([1, 2, 3, 4, 5]));
 
 // recursive array reverse
 function reverseArray(arr) {
@@ -24,9 +26,9 @@ function reverseArray(arr) {
 
   //   console.log(reverseArray(arr.slice(1)));
 
-  let reversedSubArray = reverseArray(arr.slice(1));
+  let reversedSubArray = reverseArray(arr.slice(1)); // [2, 3, 4, 5, 1]
 
-  reversedSubArray.push(arr[0]);
+  reversedSubArray.push(arr[0]); // [5,4,3,2,1]
 
   return reversedSubArray;
 }
